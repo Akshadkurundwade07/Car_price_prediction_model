@@ -1,7 +1,7 @@
 from flask import Flask,render_template
 import pandas as pd 
 app = Flask(__name__)
-car = pd.read_csv('cleaned_cars.csv')
+car = pd.read_csv('cleaned_car.csv')
 
 
 @app.route('/')
