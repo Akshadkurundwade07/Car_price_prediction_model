@@ -14,7 +14,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="card mt-50" style=""width:100%; height:100%>
+        <div class="card mt-50" style="width:100%; height:100"%>
           
           <div class="car-header">
             <div class="col-12" style="text-align: center">
@@ -24,10 +24,38 @@
                  <form method="post" action="#" accept-charset="utf-8"></form>
                    <div class="col-18 form-group" style="text-align: center">
                     <label><b>Select Company: </b></label>
+                    <select class="selectpicker form-control" id="company" name="company" required>
+                      {% for company in companies %}
+                          <option value="{{ company }}">{{ company }}</option>
+                      {% endfor %}
+                    </select>
+                   </div>
+
+                    <div class="col-18 form-group" style="text-align: center">
+                    <label><b>Select year of purchase: </b></label>
+                    <select class="selectpicker form-control" id="year" name="year" required="1">
+                      <option value=""></option>
+                    </select>
+                   </div>
+
+                    <div class="col-18 form-group" style="text-align: center">
+                    <label><b>Select fuel type: </b></label>
                     <select class="selectpicker form-control" id="company" name="company" required="1">
                       <option value=""></option>
                     </select>
                    </div>
+
+                    <div class="col-18 form-group" style="text-align: center">
+                    <label><b>Enter number of kilometers driven: </b></label>
+                    <input type="text" class="form-control" id="kilo_driven" name="kilo_driven" placeholder="Enter kilometers driven" required="1">
+                    </select>
+                   </div>
+                     
+
+                     <div class="col-18 form-group" style="text-align: center">
+                          <button class="btn btn-primary form-control" onclick="">predict price</button>    
+                   </div>
+
                  </form>
                </div>
              </div>
